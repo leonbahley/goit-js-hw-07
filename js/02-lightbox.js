@@ -6,8 +6,8 @@ const galleryRef = document.querySelector('.gallery');
 function createGalleryMarkup(gallery) {
   return gallery
     .map(
-      item => `<div class="gallery__item">
-  <a class="gallery__link" href="${item.original}">
+      item => `
+  <a class="gallery__item" href="${item.original}">
     <img
       class="gallery__image"
       src="${item.preview}"
@@ -16,7 +16,7 @@ function createGalleryMarkup(gallery) {
       
     />
   </a>
-</div>`
+`
     )
     .join('');
 }
